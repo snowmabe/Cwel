@@ -7,12 +7,20 @@ import org.lwjgl.glfw.GLFW;
 
 public class Keybinds {
     public static KeyBinding TOGGLE_GUI;
+    public static KeyBinding OPEN_CONFIG;
 
     public static void registerKeybinds() {
         TOGGLE_GUI = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.v9sndlc.toggle_gui",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_P,
+                "category.v9sndlc"
+        ));
+
+        OPEN_CONFIG = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key.v9sndlc.open_config",
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_O,
                 "category.v9sndlc"
         ));
     }
